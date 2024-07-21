@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+
+  <!-- Primary Meta Tags -->
+  <title>Pokedex</title>
+  <meta name="title" content="Pokedex - Know Pokemons">
+  <meta name="description" content="Explore the vast world of Pokémon with our comprehensive Pokedex app. Discover detailed information on all Pokémon species, including their types, abilities, evolutions, and stats. Whether you're a seasoned trainer or new to the Pokémon universe, our user-friendly interface makes it easy to search, filter, and learn about your favorite creatures.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Pokedex - Know Pokemons">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.yourwebsite.com/">
+  <meta property="og:title" content="Pokedex - Know Pokemons">
+  <meta property="og:description" content="Explore the vast world of Pokémon with our comprehensive Pokedex app. Discover detailed information on all Pokémon species, including their types, abilities, evolutions, and stats. Whether you're a seasoned trainer or new to the Pokémon universe, our user-friendly interface makes it easy to search, filter, and learn about your favorite creatures.">
+  <meta property="og:image" content="https://www.yourwebsite.com/path-to-image.jpg">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.yourwebsite.com/">
+  <meta property="twitter:title" content="Pokedex - Know Pokemons">
+  <meta property="twitter:description" content="Explore the vast world of Pokémon with our comprehensive Pokedex app. Discover detailed information on all Pokémon species, including their types, abilities, evolutions, and stats. Whether you're a seasoned trainer or new to the Pokémon universe, our user-friendly interface makes it easy to search, filter, and learn about your favorite creatures.">
+  <meta property="twitter:image" content="https://www.yourwebsite.com/path-to-image.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Pokedex - Know Pokemons",
+    "description": "Explore the vast world of Pokémon with our comprehensive Pokedex app. Discover detailed information on all Pokémon species, including their types, abilities, evolutions, and stats. Whether you're a seasoned trainer or new to the Pokémon universe, our user-friendly interface makes it easy to search, filter, and learn about your favorite creatures.",
+    "operatingSystem": "Any",
+    "applicationCategory": "ReferenceApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+
+  <!-- Other necessary meta tags and scripts -->
+  <script>
+    // This script will help to dynamically update metadata
+    function updateMetadata(title, description, url, image) {
+      // Update standard meta tags
+      document.title = title;
+      document.querySelector('meta[name="description"]').setAttribute("content", description);
+      
+      // Update Open Graph and Twitter tags
+      document.querySelector('meta[property="og:title"]').setAttribute("content", title);
+      document.querySelector('meta[property="og:description"]').setAttribute("content", description);
+      document.querySelector('meta[property="og:url"]').setAttribute("content", url);
+      document.querySelector('meta[property="og:image"]').setAttribute("content", image);
+      document.querySelector('meta[property="twitter:title"]').setAttribute("content", title);
+      document.querySelector('meta[property="twitter:description"]').setAttribute("content", description);
+      document.querySelector('meta[property="twitter:url"]').setAttribute("content", url);
+      document.querySelector('meta[property="twitter:image"]').setAttribute("content", image);
+    }
+  </script>
+</head>
+<body>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
