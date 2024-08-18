@@ -36,7 +36,7 @@ class WebRouter {
         name: Routes.signinRoute.name,
         path: Routes.signinRoute.path,
         builder: (context, state) {
-          updatePageMetadata(Routes.signinRoute);
+          updatePageMetadata(state, Routes.signinRoute);
           return const SignInScreen();
         },
       ),
@@ -44,7 +44,7 @@ class WebRouter {
         name: Routes.homePage.name,
         path: Routes.homePage.path,
         builder: (context, state) {
-          updatePageMetadata(Routes.homePage);
+          updatePageMetadata(state, Routes.homePage);
           return HomeScreen(search: state.uri.queryParameters['search'] ?? '');
         },
         routes: [
@@ -61,21 +61,21 @@ class WebRouter {
                   name: Routes.newsRoute.name,
                   path: Routes.newsRoute.path,
                   builder: (context, state) {
-                    updatePageMetadata(Routes.newsRoute);
+                    updatePageMetadata(state, Routes.newsRoute);
                     return const NewsScreen();
                   }),
               GoRoute(
                   name: Routes.favouriteRoute.name,
                   path: Routes.favouriteRoute.path,
                   builder: (context, state) {
-                    updatePageMetadata(Routes.favouriteRoute);
+                    updatePageMetadata(state, Routes.favouriteRoute);
                     return const FavouriteScreen();
                   }),
               GoRoute(
                 name: Routes.pokemonsRoute.name,
                 path: Routes.pokemonsRoute.path,
                 builder: (context, state) {
-                  updatePageMetadata(Routes.pokemonsRoute);
+                  updatePageMetadata(state, Routes.pokemonsRoute);
                   return const PokemonsSreen();
                 },
               ),
@@ -86,7 +86,7 @@ class WebRouter {
               path: Routes.pokemonDetailRoute.path,
               builder: (context, state) {
                 final pokemonId = state.pathParameters['pokemonId']!;
-                updatePageMetadata(Routes.pokemonDetailRoute,
+                updatePageMetadata(state, Routes.pokemonDetailRoute,
                     dynamicData: {':pokemonId': pokemonId});
                 return PokemonDetailScreen(id: pokemonId);
               }),
@@ -96,13 +96,12 @@ class WebRouter {
         name: Routes.noAccessRoute.name,
         path: Routes.noAccessRoute.path,
         builder: (context, state) {
-          updatePageMetadata(Routes.noAccessRoute);
+          updatePageMetadata(state, Routes.noAccessRoute);
           return const PageNotFound();
         },
       ),
     ],
     errorBuilder: (context, state) {
-      updatePageMetadata(Routes.noAccessRoute);
       return const PageNotFound();
     },
     redirect: _rootRedirectCheck,

@@ -62,6 +62,7 @@
     function updateMetadata(title, description, url, image) {
       // Update standard meta tags
       document.title = title;
+      document.querySelector('meta[name="title"]').setAttribute("content", title);
       document.querySelector('meta[name="description"]').setAttribute("content", description);
       
       // Update Open Graph and Twitter tags

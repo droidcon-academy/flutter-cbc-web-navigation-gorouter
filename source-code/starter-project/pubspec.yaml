@@ -15,6 +15,7 @@ dependencies:
   shared_preferences: ^2.2.3
   cached_network_image: ^3.3.1
   sliding_up_panel: ^2.0.0+1
+  # TODO: Add go_router package
 
 dev_dependencies:
   flutter_test:
